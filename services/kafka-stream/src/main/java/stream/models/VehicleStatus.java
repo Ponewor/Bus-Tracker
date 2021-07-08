@@ -1,8 +1,8 @@
-package stream;
+package stream.models;
 
 import java.util.Date;
 
-public class ZtmRecord {
+public class VehicleStatus {
     public String lines;
     public double lon;
     public double lat;
@@ -10,13 +10,9 @@ public class ZtmRecord {
     public String brigade;
     public Date time;
     public double speed;
-    public double distance;
     public double bearing;
 
-    public ZtmRecord() {
-    }
-
-    public ZtmRecord(InputZtmRecord record) {
+    public VehicleStatus(ZtmRecord record) {
         this.lines = record.lines;
         this.lon = record.lon;
         this.lat = record.lat;

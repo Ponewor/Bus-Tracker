@@ -1,10 +1,10 @@
-package stream;
+package stream.models;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
-public class InputZtmRecord {
+public class ZtmRecord {
     @SerializedName("Lines")
     public String lines;
     @SerializedName("Lon")
@@ -17,16 +17,4 @@ public class InputZtmRecord {
     public String brigade;
     @SerializedName("Time")
     public Date time;
-
-    public InputZtmRecord() {
-    }
-
-    public InputZtmRecord(String lines, double lon, double lat, String vehicleNumber, String brigade, Date time) {
-        this.lines = lines;
-        this.lon = lon;
-        this.lat = lat;
-        this.vehicleNumber = vehicleNumber;
-        this.brigade = brigade;
-        this.time = time;
-    }
 }

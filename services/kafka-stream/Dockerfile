@@ -10,5 +10,4 @@ WORKDIR /home/gradle
 
 RUN gradle build
 
-#CMD touch xd.txt && tail -f xd.txt
 CMD java -jar build/libs/gradle-all.jar
