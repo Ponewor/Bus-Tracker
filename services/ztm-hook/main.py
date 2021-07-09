@@ -36,8 +36,7 @@ if __name__ == '__main__':
     while True:
         for params in (bus_params, tram_params):
             try:
-                r = requests.get(url=url, params=params)
-                send_data(r.json())
+                send_data(requests.get(url=url, params=params).json())
             except:
                 logging.error("Error")
-        time.sleep(30)
+        time.sleep(3)
