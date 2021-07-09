@@ -37,7 +37,7 @@ var drawMarkers = function () {
                 removeMarkers();
                 data.forEach(
                     el => function () {
-                        let marker = L.marker([el.lat, el.lon], {icon: busIcon}).addTo(mymap);
+                        let marker = L.marker([el.lat, el.lon], {icon: busIcon, rotationAngle: el.bearing - 90}).addTo(mymap);
                         marker.bindPopup('<b>' + el.lines + '</b>');
                         markers.push(marker);
                     }()
